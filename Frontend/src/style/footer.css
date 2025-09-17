@@ -1,0 +1,73 @@
+/* =========================
+   Footer (matches footer.jsx)
+   Sections:
+   1) .footer__top        -> dark help/app strip
+   2) .footer__links      -> quick links on white
+   3) .footer__mega       -> categories on light gray
+   4) .footer__bottom     -> maroon copyright bar
+   ========================= */
+
+.footer { 
+  font-family: Arial, Helvetica, sans-serif; 
+  color: #222; 
+  background: #fff; 
+  width: 100vw; 
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  display: block; 
+}
+.footer, .footer * { box-sizing: border-box; }
+
+/* 1) Top dark strip */
+.footer__top { background: #333; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 18px 96px; }
+.footer__title { margin: 0 0 8px 0; font-weight: 700; letter-spacing: .4px; }
+.footer__badges { display: flex; gap: 12px; }
+.footer__badge { width: 140px; height: 42px; background-size: contain; background-repeat: no-repeat; background-position: center; display: inline-block; }
+.footer__badge.google { background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg'); }
+.footer__badge.apple { background-image: url('https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg'); }
+.footer__help-title { margin: 0; font-weight: 700; text-transform: uppercase; font-size: 14px; }
+.footer__help-number { margin: 6px 0 2px; font-weight: 800; letter-spacing: .4px; }
+.footer__help-time { margin: 0; opacity: .9; font-size: 12px; }
+
+/* 2) Quick links row (white) */
+.footer__links { background: #fff; display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; padding: 32px 96px; border-bottom: 1px solid #eee; }
+.footer__col h4 { margin: 0 0 12px 0; font-size: 16px; font-weight: 700; }
+.footer__col a { display: block; color: #333; text-decoration: none; font-size: 14px; margin: 10px 0; }
+.footer__col a:hover { text-decoration: underline; }
+.footer__socials { display: flex; gap: 12px; align-items: center; }
+.social { width: 28px; height: 28px; background: #eee; border-radius: 50%; display: inline-block; }
+.social.ig { background-image: url('https://static-00.iconduck.com/assets.00/instagram-icon-2048x2048-5w3b5xq5.png'); background-size: cover; }
+.social.fb { background-image: url('https://static-00.iconduck.com/assets.00/facebook-icon-2048x2048-wq9o4x7t.png'); background-size: cover; }
+
+/* 3) Mega category grid (light gray band) */
+.footer__mega { background: #f5f5f5; border-top: 1px solid #e6e6e6; display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; padding: 28px 96px; }
+.footer__mega-col h5 { margin: 0 0 10px 0; font-size: 14px; color: #555; text-transform: uppercase; letter-spacing: .3px; }
+.footer__mega-col a { display: block; color: #666; text-decoration: none; font-size: 13px; margin: 8px 0; }
+.footer__mega-col a:hover { text-decoration: underline; }
+
+/* 4) Bottom maroon copyright bar */
+.footer__bottom { text-align: center; background: #9a1d46; color: #fff; padding: 14px 10px; font-size: 13px; }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .footer__links { grid-template-columns: repeat(4, 1fr); padding-left: 64px; padding-right: 64px; }
+  .footer__mega { grid-template-columns: repeat(4, 1fr); padding-left: 64px; padding-right: 64px; }
+  .footer__top { padding-left: 64px; padding-right: 64px; }
+}
+
+@media (max-width: 900px) {
+  .footer__links { grid-template-columns: repeat(3, 1fr); padding-left: 40px; padding-right: 40px; }
+  .footer__mega { grid-template-columns: repeat(3, 1fr); padding-left: 40px; padding-right: 40px; }
+  .footer__top { padding-left: 40px; padding-right: 40px; flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .footer__links { grid-template-columns: repeat(2, 1fr); padding-left: 16px; padding-right: 16px; }
+  .footer__mega { grid-template-columns: repeat(2, 1fr); padding-left: 16px; padding-right: 16px; }
+  .footer__top { padding-left: 16px; padding-right: 16px; }
+}
+
+
+
+
+
